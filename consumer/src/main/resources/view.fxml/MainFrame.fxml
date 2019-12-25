@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="514.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.kpfu.consumer.control.MainFrameController">
+   <children>
+      <TabPane fx:id="tabPane" layoutX="92.0" layoutY="36.0" prefHeight="478.0" prefWidth="574.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0">
+        <tabs>
+            <Tab fx:id="queryTab" closable="false" text="SELECT" />
+        </tabs>
+      </TabPane>
+      <ToolBar fx:id="toolBar" prefHeight="22.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#onAddAction" text="Add" />
+            <Button mnemonicParsing="false" onAction="#onEditAction" text="Edit" />
+            <Button mnemonicParsing="false" onAction="#onDeleteAction" text="Delete" />
+            <Button mnemonicParsing="false" onAction="#onRefreshAction" text="Refresh" />
+            <Button mnemonicParsing="false" onAction="#onFilterAction" text="Filter" />
+            <Button mnemonicParsing="false" onAction="#onSaveAction" text="Save" />
+            <Button mnemonicParsing="false" onAction="#onLoadAction" text="Load" />
+            <Button mnemonicParsing="false" onAction="#onForceUpdateAction" text="Force Update From Central DB" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

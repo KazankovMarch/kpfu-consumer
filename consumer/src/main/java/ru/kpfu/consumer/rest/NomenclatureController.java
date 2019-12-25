@@ -1,6 +1,7 @@
 package ru.kpfu.consumer.rest;
 
 
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 import ru.kpfu.consumer.model.Nomenclature;
 
@@ -9,13 +10,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-@RestController
-@RequestMapping("/api/nomenclature")
+@Service
 public class NomenclatureController {
 
 
-    @PostMapping
-    @ResponseBody
     public Nomenclature addNomenclature(@RequestBody Nomenclature nomenclature){
         Date now = new Date();
         nomenclature.setCreateDate(now);
@@ -26,11 +24,8 @@ public class NomenclatureController {
     }
 
 
-    @GetMapping
-    @ResponseBody
     public List<Nomenclature> getNomenclatures(
-            @RequestParam Date dateFrom,
-            @RequestParam(defaultValue = "30") int limit
+            Date dateFrom
     ){
         Nomenclature n1 = addNomenclature(
                 new Nomenclature(
